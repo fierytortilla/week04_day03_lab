@@ -1,0 +1,13 @@
+<h1>THE PIZZA ORDER</h1>
+
+<p>The order is from <%= @order.pretty_name() %></p>
+<p>The pizza is <%= @order.quantity %> x <%= @order.topping%></p>
+
+<p><a href="/pizza_orders/<%= @order.id %>/edit"> Edit this order.</a></p>
+
+<!-- <p><a href="/pizza_orders/<%= @order.id %>/delete"> Delete this order.</a></p> -->
+<form action="/pizza_orders/<%= @order.id %>/delete" method="post">
+  <button type="submit" name="Delete">Despair is Holy</button>
+</form>
+
+<hr />

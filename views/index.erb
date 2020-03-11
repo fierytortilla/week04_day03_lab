@@ -1,0 +1,14 @@
+<h1>ALL TEH PIZZAS!!!!</h1>
+
+<ul>
+  <!-- note that ice cream cones with equal signs will be printed, so we remove them from lines we want under the hood %> -->
+  <% @orders.each do |order| %>
+    <!-- remember that the ice cream cone brackets is where we put our ruby code -->
+    <p>Name: <%= order.pretty_name() %></p>
+    <p>Order: <%= order.quantity %> x <%= order.topping %></p>
+    <p>
+      <a href="/pizza_orders/<%= order.id %>">More details</a>
+    </p>
+    <hr />
+  <% end %>
+</ul>

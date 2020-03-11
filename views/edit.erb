@@ -1,0 +1,31 @@
+<h1>YOU WANT TO EDIT THIS PIZZA ORDER???</h1>
+
+<form method="post" action="/pizza_orders/<%= @order.id %>">
+  <label for="first-name">First Name:</label>
+    <input
+    type="text"
+    name="first_name"
+    id="first-name"
+    value= <%= @order.first_name %>>
+  <label for="last-name">Last Name:</label>
+    <input
+    type="text"
+    name="last_name"
+    id="last-name"
+    value= <%= @order.last_name %>>
+  <label for="pizza-selection">Pizza:</label>
+    <select name="topping" id="pizza-selection">
+      <option value="Margherita"
+      <%= "selected" if @order.topping == "Margherita" %>>Margherita</option>
+      <option value="Vegan Meth"
+      <%= "selected" if @order.topping == "Vegan Meth" %>>Vegan Meth</option>
+      <option value="Pepperoni"
+      <%= "selected" if @order.topping == "Pepperoni"  %>>Pepperoni</option>
+    </select>
+  <label for="pizza-quantity">Quantity:</label>
+    <input type="number" name="quantity" id="pizza-quantity"
+    value= <%= @order.quantity %>>
+
+<input type="submit" value="Confirm edits">
+
+</form>

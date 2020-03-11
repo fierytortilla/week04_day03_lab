@@ -1,0 +1,19 @@
+<form method="post" action="/pizza_orders">
+  <!-- we need to set up this form so that the input matches the attributes of the relevant object, which match the columns of the TABLE -->
+  <label for="first-name">First Name:</label>
+    <!-- the name of input matches up with our database item, but the id matches up with the for section of the label above -->
+    <input type="text" name="first_name" id="first-name">
+  <label for="last-name">Last Name:</label>
+    <input type="text" name="last_name" id="last-name">
+  <label for="pizza-select">Select a pizza:</label>
+    <select id="pizza-select" name="topping">
+      <option value="Margherita">Margherita</option>
+      <option value="Meth">Meth</option>
+      <option value="Vegan Meth">Vegan Meth</option>
+  </select>
+  <label for="Quantity">Quantity</label>
+    <input type="number" name="Quanity" id="Quantity">
+
+  <input type="submit" value="Order pizza">
+
+</form>
